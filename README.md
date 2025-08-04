@@ -16,7 +16,7 @@
   Uses MediaPipe to ensure your face is always in front of the camera.  
   > ⚠️ `If your face is not visible or you're out of frame, a warning is displayed — just like a real interview!`
 
-- 🗣️ **Text-to-Speech and Audio Recording**  
+- 🗣️ **Text-to-Speech and Speech-to-Text**  
   Questions are read aloud using text-to-speech, and your spoken responses are captured and processed.
 
 - 🔐 **User Authentication**  
