@@ -1,27 +1,46 @@
-**🧠 MockMate – AI-Powered Interview Preparation Web App**
-MockMate is a smart, real-time interview preparation platform built using React.js, designed to simulate realistic HR and technical interviews. It features intelligent question handling, live face monitoring, and dynamic follow-up questions powered by AI, creating an experience that mirrors real-world interviews.
+# 💼 **MockMate – AI-Powered Interview Preparation Web App**
 
-**🚀 Key Features**
-🎤 Mock Interview Sessions: Practice with audio/video-based HR and technical interview questions.
+**MockMate** is a smart, real-time **interview preparation platform** built using **React.js**, designed to simulate realistic HR and technical interviews. It features intelligent question handling, live face monitoring, and dynamic follow-up questions powered by AI — offering an experience that closely mirrors real-world interviews.
 
-🤖 AI-Generated Follow-Up Questions: ChatGPT API integration to dynamically generate follow-up questions based on your answers.
+---
 
-🎥 Face Monitoring with Camera: Ensures you're present and attentive during the interview. If your face is not detected or you move out of frame, the system warns you—just like a real panel would.
+## 🚀 **Key Features**
 
-🧠 TTS and Speech Recording: Text-to-speech for asking questions, and microphone integration to capture and process your answers.
+- 🎤 **Mock Interview Sessions**  
+  Practice with audio/video-based HR and technical interview questions.
 
-🔐 User Authentication: Secure login system for personalized experiences and session tracking.
+- 🤖 **AI-Generated Follow-Up Questions**  
+  ChatGPT API integration dynamically generates follow-up questions based on your responses.
 
-📊 Performance Tracking (Coming Soon): Analyze your responses and track improvement over time.
+- 🎥 **Real-Time Face Monitoring**  
+  Uses MediaPipe to ensure your face is always in front of the camera.  
+  > ⚠️ `If your face is not visible or you're out of frame, a warning is displayed — just like a real interview!`
 
-**🛠️ Tech Stack**
-Frontend: React.js, Tailwind CSS
+- 🗣️ **Text-to-Speech and Audio Recording**  
+  Questions are read aloud using text-to-speech, and your spoken responses are captured and processed.
 
-AI Services: Google gemini , Speech to text , Text to speech  , MediaPipe (Face Detection)
+- 🔐 **User Authentication**  
+  Secure JWT-based login system for a personalized experience.
 
-Backend (optional): Django/Node.js for session management and audio processing
+- 📊 **Performance Tracking** *(Coming Soon)*  
+  View your progress and identify areas for improvement with analytics and feedback.
 
-Audio Handling: Web APIs, MediaRecorder
+---
 
-**📸 Smart Interview Experience**
-MockMate doesn't just ask questions — it monitors your engagement, listens to your answers, and adapts with follow-up questions like a real interviewer. It prepares you not just for questions, but for the discipline and composure expected in professional interviews.
+## 🛠️ **Tech Stack**
+
+| Layer       | Technology Used                    |
+|-------------|------------------------------------|
+| **Frontend** | React.js, Tailwind CSS              |
+| **AI/ML**   | OpenAI ChatGPT API, MediaPipe (WASM) |
+| **Backend** *(optional)* | Django / Node.js               |
+| **Audio**   | Web APIs, MediaRecorder              |
+
+---
+
+## 📸 **Smart Interview Experience**
+
+MockMate doesn't just ask questions — it **monitors your engagement**, **listens to your answers**, and **responds intelligently** with follow-up prompts. This immersive, adaptive behavior prepares you not just for interview questions, but for the **composure, attention, and discipline** expected in a real interview environment.
+
+---
+
