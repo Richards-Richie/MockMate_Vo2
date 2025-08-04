@@ -1,0 +1,60 @@
+# ==========================
+# Global settings
+# ==========================
+*.log
+*.env
+.env.*
+.DS_Store
+Thumbs.db
+*.sqlite3
+__pycache__/
+*.py[cod]
+*.swp
+*.swo
+*.bak
+
+# Ignore Python virtual environments (common across all systems)
+venv/
+ENV/
+env/
+.env/
+
+# ==========================
+# React Project (client/)
+# ==========================
+client/node_modules/
+client/build/
+client/dist/
+client/.next/
+client/.cache/
+client/.eslintcache
+client/.parcel-cache/
+client/public/static/
+
+client/.vscode/
+
+# ==========================
+# Node.js Project (MS_1_node/)
+# ==========================
+MS_1_node/node_modules/
+MS_1_node/dist/
+MS_1_node/build/
+MS_1_node/.env
+MS_1_node/npm-debug.log
+MS_1_node/yarn-error.log
+MS_1_node/.vscode/
+
+# ==========================
+# Django Project (MS_2_django/)
+# ==========================
+MS_2_django/__pycache__/
+MS_2_django/*.pyc
+MS_2_django/*.pyo
+MS_2_django/db.sqlite3
+MS_2_django/media/
+MS_2_django/staticfiles/
+MS_2_django/.env
+MS_2_django/*.log
+MS_2_django/env/
+MS_2_django/venv/
+MS_2_django/.vscode/
