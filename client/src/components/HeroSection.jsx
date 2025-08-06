@@ -38,7 +38,7 @@ const HeroSection = () => {
             </div>
 
             {/* Stats */}
-            <div className="row text-center pt-4 border-top">
+            {/* <div className="row text-center pt-4 border-top">
               <div className="col-4">
                 <div className="fs-2 fw-bold text-dark">10K+</div>
                 <div className="text-secondary">Successful Interviews</div>
@@ -51,7 +51,7 @@ const HeroSection = () => {
                 <div className="fs-2 fw-bold text-dark">4.9/5</div>
                 <div className="text-secondary">User Rating</div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Right Content */}

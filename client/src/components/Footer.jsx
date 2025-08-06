@@ -15,14 +15,16 @@ const Footer = () => {
               </div>
               <span className="fs-3 fw-bold text-white">MockMate</span>
             </div>
-            <p className="text-muted mb-4">
+            <p className="text-white mb-4">
               AI-powered mock interview preparation platform helping job seekers enhance their confidence and performance through simulated HR interviews.
             </p>
             <div className="d-flex gap-3">
-              <Facebook className="social-icon" />
-              <Twitter className="social-icon" />
-              <Linkedin className="social-icon" />
-              <Instagram className="social-icon" />
+              <a href="https://www.linkedin.com/in/richards-dande-b13851206/" >
+                <Linkedin className="social-icon" />
+              </a>
+              <a href='https://www.linkedin.com/in/richards-dande-b13851206/'>
+                <Instagram className="social-icon" />
+              </a>
             </div>
           </div>
 
@@ -32,14 +34,12 @@ const Footer = () => {
             <ul className="list-unstyled">
               <li className="mb-2"><a href="#features">Features</a></li>
               <li className="mb-2"><a href="#how-it-works">How It Works</a></li>
-              <li className="mb-2"><a href="#testimonials">Testimonials</a></li>
               <li className="mb-2"><a href="#pricing">Pricing</a></li>
-              <li className="mb-2"><a href="#blog">Blog</a></li>
             </ul>
           </div>
 
           {/* Support */}
-          <div className="col-lg-2 col-md-6">
+          {/* <div className="col-lg-2 col-md-6">
             <h5 className="text-white mb-4">Support</h5>
             <ul className="list-unstyled">
               <li className="mb-2"><a href="#help">Help Center</a></li>
@@ -48,7 +48,7 @@ const Footer = () => {
               <li className="mb-2"><a href="#community">Community</a></li>
               <li className="mb-2"><a href="#status">System Status</a></li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Contact Info */}
           <div className="col-lg-5 col-md-6">
@@ -56,20 +56,20 @@ const Footer = () => {
             <div className="mb-4">
               <div className="d-flex align-items-center mb-3">
                 <Mail size={20} className="text-primary me-3" />
-                <span className="text-muted">support@mockmate.com</span>
+                <span className="text-white">support@mockmate.com</span>
               </div>
               <div className="d-flex align-items-center mb-3">
                 <Phone size={20} className="text-success me-3" />
-                <span className="text-muted">+1 (555) 123-4567</span>
+                <span className="text-white">+1 (555) 123-4567</span>
               </div>
               <div className="d-flex align-items-center mb-3">
                 <MapPin size={20} className="text-danger me-3" />
-                <span className="text-muted">San Francisco, CA</span>
+                <span className="text-white">San Francisco, CA</span>
               </div>
             </div>
             
             {/* Newsletter Signup */}
-            <div>
+            {/* <div>
               <h6 className="text-white mb-3">Stay Updated</h6>
               <div className="input-group">
                 <input
@@ -81,7 +81,7 @@ const Footer = () => {
                   Subscribe
                 </button>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -91,7 +91,7 @@ const Footer = () => {
         <div className="container py-4">
           <div className="row align-items-center">
             <div className="col-md-6">
-              <div className="text-muted small">
+              <div className="text-white small">
                 © 2025 MockMate. All rights reserved.
               </div>
             </div>

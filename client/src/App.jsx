@@ -1,22 +1,17 @@
 import React from 'react';
-import Header from './components/Header';
-import HeroSection from './components/HeroSection';
-import FeaturesSection from './components/FeaturesSection';
-import HowItWorksSection from './components/HowItWorksSection';
-import TestimonialsSection from './components/TestimonialsSection';
-import CTASection from './components/CTASection';
-import Footer from './components/Footer';
+import LandingPage from './components/LandingPage';
+import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 
 function App() {
   return (
     <div className="min-vh-100">
-      <Header />
-      <HeroSection />
-      <FeaturesSection />
-      <HowItWorksSection /> 
-      {/* <TestimonialsSection /> */}
-      {/* <CTASection /> */}
-      <Footer />
+      <Router>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/login" element={<LandingPage />} />
+          <Route path="/signup" element={<LandingPage />} />
+        </Routes>  
+      </Router>
     </div>
   );
 }

@@ -60,7 +60,7 @@ const HowItWorksSection = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-4 p-5 text-center" style={{background: 'linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%)'}}>
+        {/* <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-4 p-5 text-center" style={{background: 'linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%)'}}>
           <h3 className="h2 fw-bold text-dark mb-3">Ready to Get Started?</h3>
           <p className="fs-5 text-secondary mb-4 mx-auto" style={{maxWidth: '500px'}}>
             Join thousands of job seekers who have improved their interview skills and landed their dream jobs with MockMate.
@@ -68,7 +68,7 @@ const HowItWorksSection = () => {
           <button className="btn btn-gradient btn-lg">
             Start Your Free Trial
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -9,9 +9,10 @@ const Header = () => {
       <div className="container">
         <nav className="navbar navbar-expand-lg navbar-light py-3">
           {/* Logo */}
-          <a className="navbar-brand d-flex align-items-center" href="#">
+          <a className="navbar-brand d-flex align-items-center" href="/">
             <div className="bg-gradient-primary p-2 rounded me-2">
               <Brain className="text-white" size={24} />
+              {/* <BrainCircuit /> */}
             </div>
             <span className="fs-3 fw-bold text-dark">MockMate</span>
           </a>
@@ -35,15 +36,15 @@ const Header = () => {
               <li className="nav-item">
                 <a className="nav-link text-secondary fw-medium" href="#how-it-works">How It Works</a>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <a className="nav-link text-secondary fw-medium" href="#testimonials">Testimonials</a>
-              </li>
+              </li> */}
               <li className="nav-item">
-                <a className="nav-link text-secondary fw-medium" href="#login">Login</a>
+                <a className="nav-link text-secondary fw-medium" href="login">Login</a>
               </li>
             </ul>
-            <button className="btn btn-gradient">
-              Sign Up
+            <button className="btn btn-gradient" > 
+              <a href="signup" className="text-white text-decoration-none">Sign Up</a>
             </button>
           </div>
         </nav>
