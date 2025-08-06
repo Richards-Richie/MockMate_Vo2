@@ -30,6 +30,7 @@ client/.cache/
 client/.eslintcache
 client/.parcel-cache/
 client/public/static/
+client/.bolt/
 
 client/.vscode/
 
