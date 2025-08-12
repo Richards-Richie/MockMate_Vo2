@@ -51,20 +51,20 @@ const Footer = () => {
           </div> */}
 
           {/* Contact Info */}
-          <div className="col-lg-5 col-md-6">
+          <div className="col-lg-5 col-md-6 ms-auto ">
             <h5 className="text-white mb-4">Contact Us</h5>
             <div className="mb-4">
               <div className="d-flex align-items-center mb-3">
                 <Mail size={20} className="text-primary me-3" />
-                <span className="text-white">support@mockmate.com</span>
+                <span className="text-white">richardsdande@gmail.com</span>
               </div>
               <div className="d-flex align-items-center mb-3">
                 <Phone size={20} className="text-success me-3" />
-                <span className="text-white">+1 (555) 123-4567</span>
+                <span className="text-white">+91-6301649485</span>
               </div>
               <div className="d-flex align-items-center mb-3">
                 <MapPin size={20} className="text-danger me-3" />
-                <span className="text-white">San Francisco, CA</span>
+                <span className="text-white">Vijayawada ,Andhra Pradesh</span>
               </div>
             </div>
             

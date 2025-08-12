@@ -24,7 +24,7 @@ const FeaturesSection = () => {
     {
       icon: MessageSquare,
       title: 'Intelligent Feedback',
-      description: 'Get instant, personalized feedback powered by ChatGPT API with follow-up questions based on your responses.',
+      description: 'Get instant, personalized feedback powered by Google Gemini API with follow-up questions based on your responses.',
       iconClass: 'icon-orange'
     },
     {
