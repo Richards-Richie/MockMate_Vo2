@@ -3,6 +3,10 @@ import LandingPage from './components/LandingPage';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
+import HomePage from './pages/Home';
+import InterviewPage from './pages/interview';
+import ProtectingRoute from './pages/protectingRoute';
+
 
 function App() {
   return (
@@ -12,6 +16,12 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/interview/:topic" element={
+            <ProtectingRoute>
+              <InterviewPage />
+            </ProtectingRoute>
+          }/>
         </Routes>  
       </Router>
     </div>

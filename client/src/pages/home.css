@@ -1,0 +1,309 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* Custom CSS for Split Layout Interview App */
+:root {
+  --primary-gradient: linear-gradient(135deg, #3b82f6, #10b981);
+  --secondary-gradient: linear-gradient(135deg, #1e40af, #059669);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom gradient backgrounds */
+.bg-gradient-primary {
+  background: var(--primary-gradient);
+}
+
+.bg-gradient-secondary {
+  background: var(--secondary-gradient);
+}
+
+.gradient-text {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn-gradient {
+  background: var(--primary-gradient);
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 12px 32px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+  color: white;
+}
+
+/* Split Layout Styles */
+.split-layout {
+  height: calc(100vh - 140px); /* Subtract header and footer height */
+  overflow: hidden;
+}
+
+.left-panel {
+  position: relative;
+  height: 100%;
+}
+
+.image-container {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.interview-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.8), rgba(16, 185, 129, 0.8));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.overlay-content {
+  text-align: center;
+  max-width: 400px;
+}
+
+.right-panel {
+  height: 100%;
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #f0fdf4 100%);
+}
+
+.cards-container {
+  height: 100%;
+  overflow-y: auto;
+  padding: 2rem;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f1f5f9;
+}
+
+.cards-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.cards-container::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 3px;
+}
+
+.cards-container::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.cards-container::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.cards-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Topic Card Styles */
+.topic-card {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.topic-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border-color: #3b82f6;
+}
+
+.card-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+/* .topic-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+} */
+ .topic-logo {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.topic-card:hover .topic-icon {
+  transform: scale(1.1);
+}
+
+.card-text {
+  flex: 1;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.card-description {
+  color: #6b7280;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+/* Icon Colors */
+.icon-blue { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+.icon-green { background: linear-gradient(135deg, #10b981, #059669); }
+.icon-purple { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+.icon-orange { background: linear-gradient(135deg, #f59e0b, #d97706); }
+.icon-red { background: linear-gradient(135deg, #ef4444, #dc2626); }
+.icon-teal { background: linear-gradient(135deg, #14b8a6, #0d9488); }
+
+/* Responsive Design */
+@media (max-width: 991.98px) {
+  .split-layout {
+    height: auto;
+  }
+  
+  .left-panel {
+    height: 50vh;
+    min-height: 400px;
+  }
+  
+  .right-panel {
+    height: auto;
+  }
+  
+  .cards-container {
+    height: auto;
+    overflow-y: visible;
+    padding: 1.5rem;
+  }
+  
+  .overlay-content h2 {
+    font-size: 1.75rem;
+  }
+  
+  .cards-header h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .left-panel {
+    height: 40vh;
+    min-height: 300px;
+  }
+  
+  .cards-container {
+    padding: 1rem;
+  }
+  
+  .topic-card {
+    padding: 1rem;
+  }
+  
+  .card-content {
+    gap: 0.75rem;
+  }
+  
+  .topic-icon {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .card-title {
+    font-size: 1.1rem;
+  }
+  
+  .card-description {
+    font-size: 0.9rem;
+  }
+}
+
+/* Animation utilities */
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
+
+.floating-element {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+.topic-card:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.25);
+}

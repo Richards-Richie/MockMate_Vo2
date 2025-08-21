@@ -16,7 +16,6 @@ const Header = ({name}) => {
                 <a className="navbar-brand d-flex align-items-center" href="/">
                     <div className="bg-gradient-primary p-2 rounded me-2">
                         <Brain className="text-white" size={24} />
-
                     </div>
                     <span className="fs-3 fw-bold text-dark">MockMate</span>
                 </a>
