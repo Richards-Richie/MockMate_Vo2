@@ -6,6 +6,7 @@ import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 import HomePage from './pages/Home';
 import InterviewPage from './pages/interview';
 import ProtectingRoute from './pages/protectingRoute';
+import "@tensorflow/tfjs";
 
 
 function App() {
@@ -16,7 +17,11 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
-          <Route path="/home" element={<HomePage />} />
+          <Route path="/home" element={
+            <ProtectingRoute>
+              <HomePage />
+            </ProtectingRoute>
+          }/>
           <Route path="/interview/:topic" element={
             <ProtectingRoute>
               <InterviewPage />

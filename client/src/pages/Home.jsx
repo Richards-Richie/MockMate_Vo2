@@ -81,15 +81,18 @@ const HomePage = () => {
   const handleCardClick =async (topicId) => {
 
     try{
-        const response = await fetch(`http://localhost:5555/interview/${topicId}`,{
+        const response = await fetch(`http://localhost:8000/interview/${topicId}/`,{
           method:'POST',
           credentials:'include',
           headers: {
             'Content-Type': 'application/json',
           },
         });
-        if (response.status === 200){
+        const res=await response.json();
+        if (res.status === 200){
+          console.log("Interview questions fetched successfully:", res);
           navigate(`/interview/${topicId}`);
+          
         }else{
           console.log("Error fetching interview questions:", response.status);
           alert(response.message);

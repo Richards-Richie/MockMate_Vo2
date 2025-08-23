@@ -1,0 +1,12 @@
+.interview-video {
+    width: 640px;
+    height: 480px;
+    border-radius: 20px;
+    object-fit: cover;
+
+    /* Flip horizontally (mirror effect) */
+    transform: scaleX(-1);
+
+    /* Add cyan/blue shadow */
+    box-shadow: 0px 20px 50px rgba(0, 200, 255, 0.6);
+}

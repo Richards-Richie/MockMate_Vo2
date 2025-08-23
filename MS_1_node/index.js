@@ -5,7 +5,7 @@ const dotenv = require('dotenv');
 const client = require('./database/db.js'); 
 const {generateToken,verifyToken} = require('./authorization/jwt.js'); 
 const cookieParser = require('cookie-parser');
-const interviewRoutes = require('./routes/interview_routes.js');
+// const interviewRoutes = require('./routes/interview_routes.js');
 const authMiddleware = require('./authorization/authMiddleware.js');
 
 dotenv.config();
@@ -120,7 +120,7 @@ app.post('/signup',async (req, res) => {
 });
 
 
-app.use('/interview', interviewRoutes);
+// app.use('/interview', interviewRoutes);
 
 app.post('/verify',authMiddleware,async(req,res)=>{
     return res.status(200).json({
