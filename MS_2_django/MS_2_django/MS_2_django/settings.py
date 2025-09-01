@@ -12,12 +12,14 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+import ssl
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-print("BASE_DIR:", BASE_DIR)
+MEDIA_URL='/media/'
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 
 ENV_PATH = BASE_DIR/"MS_2_django/.env"
 load_dotenv(ENV_PATH)
@@ -46,7 +48,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "core_business_logic",
-    
+    "django_redis",
 ]
 
 MIDDLEWARE = [
@@ -95,6 +97,15 @@ DATABASES = {
     }
 }
 
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://default:RDC7L2fxQKSfm4UyOCTTD7sqyPIuatpQ@redis-11031.c62.us-east-1-4.ec2.redns.redis-cloud.com:11031/0", # Replace with your cloud Redis URL
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
+}
 
 
 # Password validation

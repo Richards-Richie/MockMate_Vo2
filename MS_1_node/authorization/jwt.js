@@ -10,13 +10,13 @@ function generateToken(email){
             email: email,
         },
         process.env.JWTSECRET, 
-        {expiresIn: '10m'}
+        {expiresIn: '1d'}
     );
     const refreshToken = jwt.sign({
             email:email,
         },
         process.env.JWTSECRET,
-        {expiresIn: '1d'}
+        {expiresIn: '7d'}
     );
     return { accessToken, refreshToken };
 }

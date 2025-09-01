@@ -11,9 +11,7 @@ def jwt_verification(view_func):
     @wraps(view_func)
     def wrapper(request,*args,**kwargs):
         
-        
         accessToken = request.COOKIES.get("accessToken")
-        print(accessToken)
         if not accessToken:
             print("No access token provided")
             return JsonResponse({"message":"Unauthorized idk why","status":401}, status=401)

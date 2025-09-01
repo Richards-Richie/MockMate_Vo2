@@ -6,9 +6,7 @@ const cookieParser = require("cookie-parser");
 dotenv.config();
 
 const authMiddleware = (req,res,next)=>{
-    console.log("cookies : ", req.cookies);
     const token = req.cookies.accessToken;
-    console.log("Token received:", token);
     console.log("Authorization middleware triggered");
     if(token){
         try{

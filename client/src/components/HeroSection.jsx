@@ -27,7 +27,7 @@ const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div className="d-flex flex-column flex-sm-row gap-3 mb-5">
-              <a href="/signup" className="btn btn-gradient btn-lg">
+              <a href="/home" className="btn btn-gradient btn-lg">
                 Start Practicing Now
                 <ArrowRight size={20} className="ms-2" />
               </a>

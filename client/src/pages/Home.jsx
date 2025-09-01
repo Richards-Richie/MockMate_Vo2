@@ -8,6 +8,8 @@ import javaLogo from './assets_icons/java.svg';
 import nodejsLogo from './assets_icons/node-js.png';
 import machineLearningLogo from './assets_icons/machine learning.png' ;
 import djangoLogo from './assets_icons/django.svg';
+import { useDispatch } from 'react-redux';
+import { setQuestions } from '../redux/questionSlice';
 
 import { 
   Users, 
@@ -18,6 +20,7 @@ import {
 
 const HomePage = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const interviewTopics = [
     {
@@ -90,15 +93,16 @@ const HomePage = () => {
         });
         const res=await response.json();
         if (res.status === 200){
-          console.log("Interview questions fetched successfully:", res);
+          //console.log("Interview questions fetched successfully:", res.data);
+          // console.log("home page.jsx",res.data)
+          await dispatch(setQuestions(res.data));
           navigate(`/interview/${topicId}`);
-          
         }else{
           console.log("Error fetching interview questions:", response.status);
           alert(response.message);
           return;
         } 
-    }
+      }
     catch(error){
       console.error("catch block : Error fetching interview questions:", error);
       return;
