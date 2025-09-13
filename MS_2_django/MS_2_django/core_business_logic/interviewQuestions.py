@@ -2,9 +2,9 @@ from google import genai
 from pydantic import BaseModel
 from typing import List
 from dotenv import load_dotenv
-load_dotenv()
-import os
 
+import os
+load_dotenv()
 class Question(BaseModel):
     id:int
     difficulty:str
@@ -20,6 +20,7 @@ client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 def get_interview_questions(topic:str):
     topic=topic.upper()
     content=os.getenv(topic)
+    print(content)
     response=client.models.generate_content(
         model="gemini-2.0-flash-lite",
         contents=content,

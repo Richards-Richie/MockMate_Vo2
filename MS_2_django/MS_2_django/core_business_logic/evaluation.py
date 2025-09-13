@@ -2,9 +2,9 @@ from google import genai
 from pydantic import BaseModel
 from typing import List
 from dotenv import load_dotenv
-load_dotenv()
-import os,json
 
+import os,json
+load_dotenv()
 class EvaluationItem(BaseModel):
     relevanceScore: float
     technicalAccuracyScore: float

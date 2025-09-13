@@ -4,7 +4,6 @@ from django.views.decorators.csrf import csrf_exempt
 # from core_business_logic.jwt_verifications import jwt_verification
 from dotenv import load_dotenv
 import os
-load_dotenv()
 from .interviewQuestions import get_interview_questions
 import json
 import tempfile
@@ -14,8 +13,9 @@ from django.core.cache import cache
 from .evaluation import get_evaluation_feedback
 
 # Create your views here.
+load_dotenv()
 
-model = whisper.load_model("tiny");
+model = whisper.load_model("base");
 
 @csrf_exempt
 def interview_view(request,topic):
